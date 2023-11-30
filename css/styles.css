@@ -10,7 +10,7 @@
     @apply py-2 text-center xl:py-4 focus:outline-none border border-gray-200 rounded-md;
   }
   .error_msg {
-    @apply absolute text-xs text-clr_red top-20 w-[20rem];
+    @apply absolute text-xs text-clr_red top-20 w-[20rem] lg:top-24;
   }
   .error {
     @apply border border-clr_red;
