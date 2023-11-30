@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .input_styles {
+    @apply px-3 border border-gray-200 rounded-md py-2 w-[95%] xl:py-4 focus:outline-none;
+  }
+  .date_styles {
+    @apply py-2 text-center xl:py-4 focus:outline-none border border-gray-200 rounded-md;
+  }
+  .error_msg {
+    @apply absolute text-xs text-clr_red top-20 w-[20rem];
+  }
+  .error {
+    @apply border border-clr_red;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:active,
+input:focus {
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to right, rgb(100, 72, 254), rgb(96, 5, 148)) border-box;
+  border: 1px solid transparent;
+}
+
+/* /* border-radius: 0.5rem; */
+/* input {
+  width: 300px;
+  height: 80px;
+  border: double 1em transparent;
+  border-radius: 20px;
+  border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1 round;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+} */
+
+/* border border-gray-200 rounded-md
+border border-gray-200 rounded-md */
+
+/* gradient_1: "hsl(249, 99%, 64%)",
+        gradient_2: "hsl(278, 94%, 30%)", */
+/* .form_input {
+  outline: none;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  height: 2.4rem;
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+}
+.form_input:active,
+.form_input:focus {
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to right, rgb(100, 72, 254), rgb(96, 5, 148)) border-box;
+  border: 1px solid transparent;
+  /* border-radius: 0.5rem;
+  padding-left: 1.2rem; */
+/* 
+@media (min-width: 1240px) {
+  .form_input {
+    padding: 1.5rem 0.5rem;
+  }
+}  */
+/* .card_details {
+  display: grid;
+  grid-template-areas:
+    "img img img img"
+    "num num num num"
+    "name name date date";
+  gap: 0.5rem;
+}
+.card_details img {
+  grid-area: img;
+  justify-self: flex-start;
+}
+.card_details h2 {
+  grid-area: num;
+}
+.card_details p:nth-of-type(1) {
+  grid-area: name;
+}
+.card_details p:nth-of-type(2) {
+  grid-area: date;
+} */

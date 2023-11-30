@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <!-- google fonts -->
+
+    <!-- linking the css style sheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-space_grotesk grid min-h-[100vh] lg:flex">
+    <main
+      class="bg-[url('../images/bg-main-mobile.png')] bg-no-repeat text-clr_neutral_100 sm:bg-cover lg:bg-[url('../images/bg-main-desktop.png')] lg:bg-auto lg:min-h-[100vh] lg:-translate-x-16 xl:translate-x-0"
+    >
+      <!-- container -->
+      <div class="container mx-auto">
+        <!-- card back img container -->
+        <div
+          class="card_back_img_container max-w-fit relative left-20 top-10 lg:top-0 lg:left-0 lg:translate-y-[27rem] lg:translate-x-60 xl:translate-y-[30rem] xl:translate-x-60"
+        >
+          <img
+            class="w-72 sm:w-[22rem] lg:w-[25rem] xl:w-auto"
+            aria-hidden="true"
+            src="images/bg-card-back.png"
+            alt=""
+          />
+          <!-- number text -->
+          <p
+            data-cvc=""
+            class="absolute top-16 right-8 sm:top-20 sm:right-10 lg:top-24 lg:right-12 xl:top-28 xl:text-lg"
+          >
+            000
+          </p>
+        </div>
+        <!-- card front img container -->
+
+        <div
+          class="card_front_img_container max-w-fit relative -top-8 left-5 sm:-top-12 lg:top-0 lg:left-0 lg:-translate-y-10 lg:translate-x-36 xl:-translate-y-16 xl:translate-x-40"
+        >
+          <img
+            class="w-72 sm:w-[22rem] lg:w-[25rem] xl:w-auto"
+            aria-hidden="true"
+            src="images/bg-card-front.png"
+            alt=""
+          />
+          <div
+            class="card_details absolute top-5 left-5 space-y-2 sm:space-y-4"
+          >
+            <img
+              class="w-16 sm:w-20 lg:w-auto xl:pb-12"
+              src="images/card-logo.svg"
+              alt=""
+            />
+            <h2
+              data-interactive=""
+              class="text-lg sm:text-xl lg:text-2xl xl:text-3xl xl:tracking-widest"
+            >
+              0000 0000 0000 0000
+            </h2>
+            <div class="flex gap-16 lg:gap-20">
+              <p data-interactive="" class="text-sm sm:text-base lg:text-xl">
+                Jane Applessed
+              </p>
+              <p class="text-sm sm:text-base lg:text-xl xl:tracking-widest">
+                <span data-interactive="">00</span>/<span data-interactive=""
+                  >00</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- the input fields -->
+    </main>
+    <section class="container mx-auto lg:w-[40%] xl:mr-44 xl:w-[30%]">
+      <!-- form section -->
+
+      <!-- the pl property depends on the front_img_container -->
+      <form class="uppercase space-y-4 pl-8 md:pt-10 lg:pt-36 xl:pt-72 lg:pl-0">
+        <label for="card_holder_name" class="relative"
+          >Cardholder name
+          <p class="error_msg hidden">Name should only include characters</p>
+        </label>
+
+        <input
+          required
+          data-cardholder=""
+          class="input_styles"
+          id="card_holder_name"
+          type="text"
+          placeholder="e.g. Jane Appleseed"
+          maxlength="24"
+        />
+
+        <label for="card_number" class="block relative"
+          >Card Number
+          <p class="error_msg hidden">
+            Card Number should only include numbers
+          </p>
+        </label>
+
+        <input
+          data-cardnum=""
+          type="text"
+          maxlength="19"
+          id="card_number"
+          placeholder="e.g. 1234 5678 9123 0000 "
+          class="input_styles"
+        />
+
+        <label aria-labelledby="date" class="block relative"
+          >Exp. date (mm/yy) cvc
+          <p class="error_msg hidden">can't be blank</p>
+          <p class="error_msg hidden translate-x-24">can't be blank</p>
+          <p class="error_msg hidden translate-x-52">can't be blank</p>
+        </label>
+        <input
+          data-date=""
+          class="date_styles w-[25%]"
+          type="number"
+          id="date"
+          placeholder="MM"
+          maxlength="2"
+          min="1"
+          max="12"
+        />
+        <input
+          data-date=""
+          class="date_styles w-[25%]"
+          type="number"
+          id="date"
+          placeholder="YY"
+          maxlength="2"
+        />
+        <input
+          data-date=""
+          class="date_styles w-[40%] xl:w-[45%]"
+          type="number"
+          name=""
+          id="date"
+          placeholder="e.g. 123"
+          maxlength="3"
+        />
+        <div class="grid">
+          <button  value="confirm"
+          type="submit"
+          class="submit uppercase text-clr_neutral_100 bg-clr_neutral_500 py-2 mr-2 rounded-md mt-3 lg:mx-0 xl:py-4">
+           
+        confirm
+        </button>
+      </form>
+    </section>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
+
+<!-- <footer class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="#">Your Name Here</a>.
+  </footer> -->
