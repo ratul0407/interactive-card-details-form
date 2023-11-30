@@ -43,7 +43,7 @@
           <!-- number text -->
           <p
             data-cvc=""
-            class="absolute top-16 right-8 sm:top-20 sm:right-10 lg:top-24 lg:right-12 xl:top-28 xl:text-lg"
+            class="absolute top-16 right-8 sm:top-20 sm:right-10 lg:top-28 lg:right-12 xl:top-28 xl:text-lg"
           >
             000
           </p>
@@ -93,14 +93,17 @@
       <!-- form section -->
 
       <!-- the pl property depends on the front_img_container -->
+      <div class="form_container">
+
+    
       <form class="uppercase space-y-4 pl-8 md:pt-10 lg:pt-36 xl:pt-72 lg:pl-0">
         <label for="card_holder_name" class="relative"
           >Cardholder name
-          <p class="error_msg hidden">Name should only include characters</p>
+          <p class="error_msg"></p>
         </label>
 
         <input
-          required
+        
           data-cardholder=""
           class="input_styles"
           id="card_holder_name"
@@ -111,8 +114,8 @@
 
         <label for="card_number" class="block relative"
           >Card Number
-          <p class="error_msg hidden">
-            Card Number should only include numbers
+          <p class="error_msg">
+           
           </p>
         </label>
 
@@ -127,9 +130,9 @@
 
         <label aria-labelledby="date" class="block relative"
           >Exp. date (mm/yy) cvc
-          <p class="error_msg hidden">can't be blank</p>
-          <p class="error_msg hidden translate-x-24">can't be blank</p>
-          <p class="error_msg hidden translate-x-52">can't be blank</p>
+          <p class="error_msg "></p>
+          <p class="error_msg  translate-x-24 lg:translate-x-28"></p>
+          <p class="error_msg  translate-x-52 lg:translate-x-60"></p>
         </label>
         <input
           data-date=""
@@ -159,14 +162,21 @@
           maxlength="3"
         />
         <div class="grid">
-          <button  value="confirm"
+          <button 
           type="submit"
           class="submit uppercase text-clr_neutral_100 bg-clr_neutral_500 py-2 mr-2 rounded-md mt-3 lg:mx-0 xl:py-4">
            
         confirm
         </button>
       </form>
-    </section>
+    </div>
+     
+  </section>
+  <div class="complete hidden grid text-center gap-3 mb-10 max-h-[12rem] lg:translate-y-72 lg:-translate-x-40">
+    <img class="mx-auto" src="images/icon-complete.svg" alt="">
+    <h2 class="lg:text-2xl">We've added your card details</h2>
+    <button class="done text-clr_neutral_100 bg-clr_neutral_500 mx-4 rounded-md lg:py-2" type="button">Continue</button>
+  </div>
     <script src="script.js" type="module"></script>
   </body>
 </html>
