@@ -15,7 +15,7 @@
  
 
 - Live Site URL : https://cheery-tapioca-0cf275.netlify.app/
-- Solution URL : 
+- Solution URL : https://www.frontendmentor.io/solutions/responsive-details-card-form-using-tailwind-css-rYPSNrk4sh
 
 <h2 align="center">Built With: </h2>
 <div align="center">
